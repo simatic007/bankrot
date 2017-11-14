@@ -5,9 +5,7 @@ $(function(){
     $('.carousel').carousel({
         interval: false
     });
-    $(function(){       
-        $('#form').validator();        
-    });
+    
 });
 window.onload = function() { // после загрузки страницы
 
@@ -16,20 +14,34 @@ window.onload = function() { // после загрузки страницы
     var passive = document.getElementById('passive');
     var active = document.getElementById('active');
 // show button
-
+    if(document.body.clientWidth < 670) {
+        active.style.display = 'block';
+        passive.style.display = 'none';
+        menuList.style.display = 'none';
+        scrollUp.style.background = 'none';
+    }
     window.onscroll = function () { // при скролле показывать и прятать блок
-        
-        if ( window.pageYOffset > 0) {
-            scrollUp.style.backgroundColor = 'white';
-            if(active.style.display != 'block') {
-                passive.style.display = 'block';
+        if(document.body.clientWidth > 670) {
+            if (window.pageYOffset > 0) {
+                scrollUp.style.display = 'block';
+                scrollUp.style.backgroundColor = 'white';
+                if (active.style.display != 'block') {
+                    passive.style.display = 'block';
+                }
+            } else {
+                scrollUp.style.backgroundColor = '#BED017';
+                passive.style.display = 'none';
             }
-        } else {
-            scrollUp.style.backgroundColor = '#BED017';
-            passive.style.display = 'none';
+            if (active.style.display == 'block' && window.pageYOffset > 0) {
+                scrollUp.style.background = 'none';
+            }
         }
-        if(active.style.display == 'block' && window.pageYOffset > 0){
+        if(document.body.clientWidth < 670) {
+            active.style.display = 'block';
+            passive.style.display = 'none';
+            menuList.style.display = 'none';
             scrollUp.style.background = 'none';
+
         }
     };
     passive.onclick = function () { // при клике прятать меню и показывать иконку(пирожок)
