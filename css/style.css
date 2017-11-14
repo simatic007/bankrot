@@ -14,7 +14,10 @@ img {
   max-width: 100%;
   height: auto; }
 
-
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
 /*---------------------------menu------------------------*/
 .menu {
   position: fixed;
