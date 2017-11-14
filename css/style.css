@@ -7,7 +7,8 @@ body {
   min-width: 320px;
   background-color: #ffd19f;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 img {
   max-width: 100%;
@@ -20,18 +21,19 @@ img {
   z-index: 9;
   min-height: 70px;
   background: #bed017;
-  width: 100%; }
+  width: 100%;
+  margin-top: 33px;}
 
 .menu__wrapper {
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
-  width: 1000px;
+  width:100%;
   position: relative;
   box-sizing: border-box; }
 
 .menu ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   display: table; }
@@ -79,7 +81,8 @@ img {
   -moz-transform: skewY(-4deg);
   -ms-transform: skewY(-4deg);
   -o-transform: skewY(-4deg);
-  transform: skewY(-4deg); }
+  transform: skewY(-4deg);
+  margin-top: -33px;}
 
 .section__frame1 {
   padding: 142px 0 68px 0;
@@ -144,11 +147,11 @@ blockquote {
   font-family: 'PT Serif', sans-serif; }
 
 blockquote:before {
-  content: '<<';
+  content: "«";
   right: 100%; }
 
 blockquote:after {
-  content: '>>';
+  content: "»";
   left: 100%; }
 
 blockquote:before, blockquote:after {
@@ -254,7 +257,8 @@ blockquote:before, blockquote:after {
 
 .carousel-indicators {
   bottom: -76px;
-  height: 100%; }
+  height: 100%;
+  width: 100px;}
 
 .carousel-indicators-wrap .carousel-indicators li {
   display: block;
@@ -305,7 +309,7 @@ blockquote:before, blockquote:after {
 
 .carousel-control.left {
   background: none;
-  left: 300px; }
+  left: 26%; }
 
 .header__slogan__info {
   margin: 0 0 27px;
@@ -334,8 +338,8 @@ blockquote:before, blockquote:after {
 .slider__info {
   position: absolute;
   bottom: 30px;
-  left: 200px;
-  width: 550px; }
+  left: 20%;
+  width: 50%; }
 
 .slider__info p {
   margin: 0;
@@ -352,7 +356,7 @@ blockquote:before, blockquote:after {
 .vertical__text__wrapper {
   position: absolute;
   bottom: 307px;
-  left: 170px;
+  left: 12%;
   width: 100px;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -488,6 +492,7 @@ blockquote:before, blockquote:after {
 /*--------------------------footer----------------------------------*/
 footer {
   margin-top: -1px;
+  padding-bottom:-100px;
   background-color: #ffd19f;
   padding-top: 100px;
   -webkit-transform: skewY(-4deg);
@@ -514,7 +519,7 @@ footer a:hover {
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
-  width: 1000px;
+  width: 100%;
   position: relative;
   box-sizing: border-box; }
 
@@ -548,7 +553,8 @@ footer a:hover {
   -moz-transform: skewY(-4deg);
   -ms-transform: skewY(-4deg);
   -o-transform: skewY(-4deg);
-  transform: skewY(-4deg); }
+  transform: skewY(-4deg);
+  padding-top: 50px;}
 .shema__wrapper{
   -webkit-transform: skewY(4deg);
   -moz-transform: skewY(4deg);
@@ -613,7 +619,7 @@ footer a:hover {
   border-radius: 80px;
   border: 5px solid #bed017;
   background: #f6f6f6;
-  line-height: 80px; }
+  line-height: 76px; }
 
 .grid:before, .grid:after {
   content: ' ';
@@ -681,8 +687,13 @@ footer a:hover {
   background-position: center right;
   background-image: url(../img/ivan.jpg);
   background-repeat: no-repeat; }
+.ivan a{
+  color: #443b40;
+  text-decoration: underline;
+}
 /*-------------about--------------------------------------*/
 .about{
+  padding-top: 50px;
   margin-top: -1px;
   background-color: #443b40;
   color: #fff;
@@ -761,8 +772,173 @@ footer a:hover {
 }
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
 /* Medium Devices, Desktops */
+@media only screen and (max-width : 940px) {
+  .menu ul li {
+    font-size: 10px;
+    padding: 0 0 0 5px;
+  }
+
+  .carousel-caption {
+    width: 300px !important;
+  }
+
+  .slider__info p {
+    font-size: 16px !important;
+  }
+
+  .menu-carousel .carousel-caption {
+    text-align: center;
+    left: 30%;
+  }
+}
 /* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
+@media only screen and (max-width : 768px) {
+
+
+}
+@media only screen and (max-width : 767px) {
+  .menu__item__link.phone{
+    font-size:13px;
+  }
+  .menu ul li {
+    font-size:8px;
+    padding: 0 0 0 4px;}
+  .slider__info {
+    width:75%;
+  }
+  .section__frame1 h1 {
+    font-size: 38px !important;
+    line-height: 46px;
+  }
+  .header__text {
+    font-size: 38px;
+  }
+  .header__info {
+    width: 100%;
+    line-height: 14px;
+    padding-top: 26px;
+  }
+
+}
+@media only screen and (max-width : 670px) {
+
+  .menu ul li {
+    font-size: 12px;
+    padding: 10px 0 29px 4px;
+    display: block;
+    height: 24px;
+  }
+
+  .menu-passive, .menu-active {
+
+    right: 30px;
+  }
+  .section__frame1 {
+    margin: 0 20px;
+    padding: 75px 0 68px 0;
+  }
+  .paragraph__two__wrapper {
+    padding: 50px 20px 20px 20px;
+  }
+  .paragraph__one__wrapper {
+    padding: 0;
+  }
+  blockquote p{
+    font-size:15px;
+  }
+  .term li {
+    width: 50px;
+    height: 50px;
+    line-height: 42px;
+  }
+  .term ul:before {
+    margin-top: -19px;
+  }
+  p.hh{
+    font-size:30px!important;
+  }
+  .vertical__text__wrapper{
+    left: 0;
+    z-index: 20;
+  }
+  
+}
+  @media only screen and (max-width: 540px) {
+    .skew__wrapper{
+      padding: 50px 20px;
+    }
+    .our__offer__rounded{
+      font-size:38px;
+    }
+    .term ul{
+      font-size:15px;
+    }
+    .term li {
+      width: 30px;
+      height: 30px;
+      line-height: 21px;
+    }
+    .term ul:before {
+      margin-top: -30px!important;
+    }
+    .shema p{
+      font-size:13px!important;
+    }
+    p.hh{
+      font-size:30px!important;
+    }
+    .about p{
+      font-size:13px;
+    }
+    .dashboard__1{
+      font-size:38px;
+    }
+    .dashboard__line strong{
+      font-size:38px;
+    }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width: 480px) {
+
+    .our__offer {
+      font-size: 38px;
+    }
+    .paragraph__two__text {
+      font-size: 15px;
+    }
+    .confirm__bankrot {
+      font-size: 27px;
+      font-weight: bold;
+    }
+    .paragraph__one__wrapper .our__offer {
+      font-size: 38px;
+    }
+    .dashboard__2, .dashboard__1{
+      font-size:16px!important;
+    }
+    .menu-carousel .bgslide {
+      background-size: 300px;
+
+      }
+    .menu-carousel .carousel-caption h3{
+      font-size: 18px!important;
+    }
+    .slider--text{
+      font-size: 12px;
+    }
+    .menu-carousel .carousel-caption{
+      left: 38%;
+      width: 50%!important;
+    }
+    .carousel-control.left{
+      left:31%;
+    }
+  }
 
 /*# sourceMappingURL=style.css.map */
